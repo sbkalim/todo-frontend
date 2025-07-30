@@ -28,5 +28,6 @@ jobs:
         npx eslint .
       continue-on-error: false
 
-
-
+    - name: Run Prettier check
+      run: |
+        npx prettier --check .
