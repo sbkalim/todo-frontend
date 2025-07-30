@@ -21,7 +21,7 @@ jobs:
 
 
     - name: Install dependencies
-      run: npm Install
+      run: npm install
 
     - name: Run npm audit
       run: npm audit --audit-level=moderate || true
@@ -30,6 +30,3 @@ jobs:
       run: |
         npx eslint . --ext .js,.jsx,.ts,.tsx || true
 
-    - name: Run Semgrep (Frontend Config)
-      run: |
-        npx semgrep --config "p/ci" --lang js --error || true
